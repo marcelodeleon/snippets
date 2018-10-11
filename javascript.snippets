@@ -1,3 +1,55 @@
+snippet cl "plain console.log" b
+console.log('$1')
+endsnippet
+
+snippet co "console.log an object" b
+console.log(\{$1\})
+endsnippet
+
 snippet log "console.log" b
 console.log(\`$1 \$\{$2\}\`)
+endsnippet
+
+snippet logo "console.log object with JSON.stringify" b
+console.log(\`$1 \$\{JSON.stringify($2, null, 2)\}\`)
+endsnippet
+
+snippet avat "ava test function signature" b
+test('$1', async t => {
+  $0
+})
+
+endsnippet
+
+snippet jsd "JSDoc template" b
+/**
+ * $1
+ * @param $2
+ * @return $3
+ */
+ $0
+endsnippet
+
+snippet rcomp "Boilerplate for React Component" b
+import React from 'react';
+
+class $1 extends React.Component {
+  render() {
+    return (
+      $0
+    );
+  }
+}
+
+export default $1;
+endsnippet
+
+snippet rscomp "Boilerpate for React Stateless Functional Component" b
+import React from 'react';
+
+const $1 = props => (
+  $0
+);
+
+export default $1;
 endsnippet
