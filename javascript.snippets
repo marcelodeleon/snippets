@@ -65,3 +65,25 @@ const $1 = props => (
 
 export default $1;
 endsnippet
+
+snippet vt "Vue testing boilerpate" b
+import { shallowMount } from '@vue/test-utils'
+
+describe('$1', () => {
+	beforeAll(() => {
+    $2
+	})
+
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+
+  afterAll(() => {
+    jest.restoreAllMocks()
+  })
+
+	it('$3', async () => {
+    $0
+	})
+})
+endsnippet
